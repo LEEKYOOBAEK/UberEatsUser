@@ -6,9 +6,9 @@ export default function App() {
   return (
     <View style={styles.container}>
     {/* Restaurant item */}
-      <RestaurantItem />
-      <RestaurantItem />
-      <RestaurantItem />
+      <RestaurantItem title="Rest1"/>
+      <RestaurantItem title="Rest2"/>
+      <RestaurantItem title="Rest3"/>
       <StatusBar style="auto" />
     </View>
   );
