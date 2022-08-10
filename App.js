@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View} from 'react-native';
 import HomeScreen from './src/screens/HomeScreen';
+import RestaurantDetailsScreen from './src/screens/RestaurantDetailsScreen';
 
 export default function App() {
   return (
@@ -8,7 +9,8 @@ export default function App() {
     {/* Restaurant item */}
       {/* <RestaurantItem restaurant={restaurants[0]}/>
       <RestaurantItem restaurant={restaurants[1]}/> */}
-      <HomeScreen />
+      {/* <HomeScreen /> */}
+      <RestaurantDetailsScreen />
       {/* <FlatList
         data = {restaurants}
         renderItem = {({item}) => <RestaurantItem restaurant={item}/>}
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
-    paddingVertical: 30,
+    // padding: 10,
+    // paddingVertical: 30,
   },
 });
