@@ -16,7 +16,7 @@ export default function App() {
         renderItem = {({item}) => <RestaurantItem restaurant={item}/>}
         showsVerticalScrollIndicator={false}
       /> */}
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </View>
   );
 }
