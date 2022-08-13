@@ -4,6 +4,8 @@ import HomeScreen from './src/screens/HomeScreen';
 import RestaurantDetailsScreen from './src/screens/RestaurantDetailsScreen';
 import DishDetailsScreen from './src/screens/DishDetailsScreen';
 import Basket from './src/screens/Basket';
+import OrderScreen from './src/screens/OrdersScreen';
+import OrderDetails from './src/screens/OrderDetails';
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
       {/* <HomeScreen /> */}
       {/* <RestaurantDetailsScreen /> */}
       <Basket />
+      {/* <OrderScreen /> */}
+      {/* <OrderDetails /> */}
       {/* <DishDetailsScreen/>  */}
       {/* <FlatList
         data = {restaurants}
@@ -23,7 +27,7 @@ export default function App() {
       <StatusBar style="light" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
