@@ -1,8 +1,11 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
 
 const RestaurantItem = ({ restaurant }) => {
+  const onPress = () => {
+    console.warn("pressed");
+  }
   return (
-    <View style={styles.restaurantContainer}>
+    <Pressable style={styles.restaurantContainer}>
       <Image 
         source={{ 
           uri: restaurant.image,
@@ -22,7 +25,7 @@ const RestaurantItem = ({ restaurant }) => {
           </Text>
         </View>
       </View>
-    </View>
+    </Pressable>
   )
 };
 

@@ -4,7 +4,7 @@ import restaurants from "../../../assets/data/restaurants.json";
 import BasketDishItem from '../../components/BusketDishItem';
 
 import {AntDesign} from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
+// import { FontAwesome5 } from '@expo/vector-icons';
 
 const restaurant = restaurants[0]
 
@@ -13,7 +13,7 @@ const Basket = () => {
 
     return (
         <View style={styles.page}>
-            <FontAwesome5 name="arrow-left" size={24} color="black" />
+            {/* <FontAwesome5 name="arrow-left" size={24} color="black" /> */}
             <Text style={styles.name}>{restaurant.name}</Text>
             <Text style={{fontSize:19, fontWeight: "bold", marginTop: 20}}>Your Items</Text>
             <FlatList 
