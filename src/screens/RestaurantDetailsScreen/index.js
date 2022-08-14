@@ -4,12 +4,13 @@ import restaurants from '../../../assets/data/restaurants.json' ;
 import DishListItem from '../../components/DishListItem';
 import Header from './Header';
 import styles from './styles';
-import { useRoute } from '@react-navigation/native';
+import { useRoute, useNavigation } from '@react-navigation/native';
 
 const restaurant = restaurants[0];
 
 const RestaurantDetailsPage = () => {
     const route = useRoute();
+    const navigation = useNavigation();
 
     const id = route.params?.id;
     console.warn(id);
@@ -23,6 +24,7 @@ const RestaurantDetailsPage = () => {
                 keyExtractor={(item)=>item.name}
             />
             <Ionicons 
+            onPress={()=>navigation.goBack()}
             name="arrow-back-circle" 
             size={45} 
             color="white" 
