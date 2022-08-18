@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+// import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
 import RestaurantDetailsScreen from '../screens/RestaurantDetailsScreen';
 import DishDetailsScreen from '../screens/DishDetailsScreen';
@@ -11,7 +12,7 @@ import DishListItem from "../components/DishListItem";
 import BasketDishItem from "../components/BusketDishItem";
 import OrdersScreen from '../screens/OrdersScreen';
 import { createStackNavigator } from "@react-navigation/stack";
-
+import ProfileScreen from '../../src/screens/ProfileScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -28,7 +29,7 @@ const RootNavigator = () => {
     );
 };
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 const HomeTabs = () => {
     return (
@@ -50,7 +51,7 @@ const HomeTabs = () => {
             />
             <Tab.Screen 
                 name='Profile' 
-                component={OrdersScreen}
+                component={ProfileScreen}
                 options={{
                     tabBarIcon: ({color}) => (<FontAwesome5 name="user-alt" size={24} color={color} />)
                 }}
