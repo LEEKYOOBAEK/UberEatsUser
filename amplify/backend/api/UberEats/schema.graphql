@@ -1,0 +1,22 @@
+type Dish @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+  price: Float
+  image: String
+  restaurantID: ID! @index(name: "byRestaurant")
+}
+
+type Restaurant @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  deliveryFee: Float
+  minDeliveryTime: Int
+  maxDeliveryTime: Int
+  rating: Float
+  Dishes: [Dish] @hasMany(indexName: "byRestaurant", fields: ["id"])
+  adress: String!
+  lat: Float!
+  lng: Float!
+  image: String!
+}

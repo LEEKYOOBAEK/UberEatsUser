@@ -33,7 +33,7 @@ const Tab = createBottomTabNavigator();
 
 const HomeTabs = () => {
     return (
-        <Tab.Navigator barStyle={{backgroundColor: "white"}}>
+        <Tab.Navigator screenOptions={{headerShown:false}} barStyle={{backgroundColor: "white"}}>
             
             <Tab.Screen 
                 name='Home' 
@@ -64,9 +64,12 @@ const HomeStack = createNativeStackNavigator();
 
 const HomeStackNavigator = () => {
     return (
-        <HomeStack.Navigator>
+        <HomeStack.Navigator >
             <HomeStack.Screen name="Restaurants" component={HomeScreen} />
-            <HomeStack.Screen name="Restaurant" component={RestaurantDetailsScreen} />
+            <HomeStack.Screen 
+                name="Restaurant" 
+                component={RestaurantDetailsScreen} 
+                options={{headerShown:false}}/>
             <HomeStack.Screen name="Dish" component={DishDetailsScreen} />
             <HomeStack.Screen name="Basket" component={Basket} />
         </HomeStack.Navigator>
