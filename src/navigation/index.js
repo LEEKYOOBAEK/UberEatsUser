@@ -13,7 +13,7 @@ import BasketDishItem from "../components/BusketDishItem";
 import OrdersScreen from '../screens/OrdersScreen';
 import { createStackNavigator } from "@react-navigation/stack";
 import ProfileScreen from '../../src/screens/ProfileScreen';
-import { useAuthContext } from "../context/AuthContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 
 const Stack = createNativeStackNavigator();
