@@ -665,8 +665,8 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "adress": {
-                    "name": "adress",
+                "address": {
+                    "name": "address",
                     "isArray": false,
                     "type": "String",
                     "isRequired": true,
@@ -777,5 +777,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "f8a9fbed090c76cc7f5fc7cb8d55c902"
+    "version": "d58ba174c10eaa434021afea73f5b51c"
 };

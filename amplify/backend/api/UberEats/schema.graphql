@@ -39,7 +39,7 @@ type BasketDish @model @auth(rules: [{allow: public}]) {
 type User @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String!
-  adress: String!
+  address: String!
   lat: Float!
   lng: Float!
   Orders: [Order] @hasMany(indexName: "byUser", fields: ["id"])

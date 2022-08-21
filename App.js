@@ -8,6 +8,8 @@ import { Amplify } from 'aws-amplify';
 import config from './src/aws-exports';
 import {withAuthenticator} from 'aws-amplify-react-native'
 
+import AuthContextProvider from './src/context/AuthContext';
+
 // 
 Amplify.configure(
   {
@@ -21,8 +23,9 @@ Amplify.configure(
 function App() {
   return (
     <NavigationContainer>
-      
-      <RootNavigator />
+      <AuthContextProvider>
+         <RootNavigator />
+      </AuthContextProvider>
     {/* Restaurant item */}
       {/* <RestaurantItem restaurant={restaurants[0]}/>
       <RestaurantItem restaurant={restaurants[1]}/> */}

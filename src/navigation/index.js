@@ -13,14 +13,23 @@ import BasketDishItem from "../components/BusketDishItem";
 import OrdersScreen from '../screens/OrdersScreen';
 import { createStackNavigator } from "@react-navigation/stack";
 import ProfileScreen from '../../src/screens/ProfileScreen';
+import { useAuthContext } from "../context/AuthContext";
 
 
 const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
+    const {dbUser} = useAuthContext();
+
     return (
         <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="HomeTabs" component={HomeTabs} />
+            {dbUser ? (
+                <Stack.Screen name="HomeTabs" component={HomeTabs} />
+            ) : (
+                <Stack.Screen name="Profile" component={ProfileScreen} />
+            )}
+            
+            
             {/* <Stack.Screen
                 name="Restaurant" 
                 component={RestaurantDetailsScreen} 

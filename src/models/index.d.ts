@@ -122,7 +122,7 @@ export declare class Restaurant {
 export declare class User {
   readonly id: string;
   readonly name: string;
-  readonly adress: string;
+  readonly address: string;
   readonly lat: number;
   readonly lng: number;
   readonly Orders?: (Order | null)[] | null;
